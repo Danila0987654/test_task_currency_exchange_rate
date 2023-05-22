@@ -59,3 +59,21 @@ class API:
         self.set_max_value()
         self.set_min_value()
         return self.answer
+
+    def get_full_average_data(self):
+        self.set_id()
+        self.set_currencies()
+        self.set_average_value()
+        return self.answer
+
+    def get_full_max_data(self):
+        self.set_id()
+        self.set_currencies()
+        self.set_max_value()
+        return self.answer
+
+    def get_full_min_data(self):
+        self.set_id()
+        self.set_currencies()
+        self.set_min_value()
+        return self.answer
