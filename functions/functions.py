@@ -5,8 +5,8 @@ from datetime import datetime, timedelta
 
 def receive_dates():
     if len(sys.argv) == 3:
-        date_end = datetime.strptime(sys.argv[1], "%Y-%m-%d")
-        date_begin = datetime.strptime(sys.argv[2], "%Y-%m-%d")
+        date_end = datetime.strptime(sys.argv[2], "%Y-%m-%d")
+        date_begin = datetime.strptime(sys.argv[1], "%Y-%m-%d")
     elif len(sys.argv) == 2:
         date_end = datetime.strptime(sys.argv[1], "%Y-%m-%d")
         date_begin = datetime.strptime(sys.argv[1], "%Y-%m-%d") - timedelta(days=90)
