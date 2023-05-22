@@ -20,3 +20,8 @@ def receive_dates():
 def print_average_data(input_data):
     for id_code, data in input_data.items():
         print(f"{data['CharCode']}: {data['Average']}")
+
+
+def print_min_data_for_every_currency(input_data):
+    for id_code, data in input_data.items():
+        print(f"{data['CharCode']}: Max minimum {data['Min']['Value']} was in {data['Min']['Date']}")
