@@ -24,9 +24,9 @@ def print_average_data(input_data):
 
 def print_min_data_for_every_currency(input_data):
     for id_code, data in input_data.items():
-        print(f"{data['CharCode']}: Min minimum {data['Min']['Value']} was in {data['Min']['Date']}")
+        print(f"{data['CharCode']}: Min value {data['Min']['Value']} was in {data['Min']['Date']}")
 
 
 def print_max_data_for_every_currency(input_data):
     for id_code, data in input_data.items():
-        print(f"{data['CharCode']}: Max minimum {data['Max']['Value']} was in {data['Max']['Date']}")
+        print(f"{data['CharCode']}: Max value {data['Max']['Value']} was in {data['Max']['Date']}")
