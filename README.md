@@ -11,7 +11,7 @@
 
 ## Description
 For launch API, you need to have a start date and a finish date in format DD/MM/YYYY. After it, you are able to choose
-which data you need: full data, average data, max data, min data. After receiving data (json), you are able to output 
+which data you need: full data, average data, max and min data. After receiving data (json), you are able to output 
 what you want. I made a few prints as an example: print_average_data, print_min_data_for_every_currency, 
 print_max_data_for_every_currency.
 
