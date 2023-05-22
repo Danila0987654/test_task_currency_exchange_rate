@@ -34,36 +34,22 @@ class API:
                 rate = value / float(currency)
                 self.currencies[id_code][date] = rate
 
-    def set_average_value(self):
-        for id_code in self.currencies:
+    def set_average_max_min_value(self):
+        for id_code, data in self.currencies.items():
             total_rate = total_count = 0
-            for date, value in self.currencies[id_code].items():
+            for date, value in data.items():
                 total_rate += value
                 total_count += 1
             self.answer[id_code]["Average"] = format(total_rate / total_count, '.6f')
 
-    def set_max_and_min_value(self):
-        for id_code, data in self.currencies.items():
             max_pair = max(data.items(), key=lambda x: x[1])
+            self.answer[id_code]["Max"] = {"Date": max_pair[0], "Value": max_pair[1]}
+
             min_pair = min(data.items(), key=lambda x: x[1])
             self.answer[id_code]["Min"] = {"Date": min_pair[0], "Value": min_pair[1]}
-            self.answer[id_code]["Max"] = {"Date": max_pair[0], "Value": max_pair[1]}
 
     def get_full_data(self):
         self.set_id()
         self.set_currencies()
-        self.set_average_value()
-        self.set_max_and_min_value()
-        return self.answer
-
-    def get_full_average_data(self):
-        self.set_id()
-        self.set_currencies()
-        self.set_average_value()
-        return self.answer
-
-    def get_full_min_and_max_data(self):
-        self.set_id()
-        self.set_currencies()
-        self.set_max_and_min_value()
+        self.set_average_max_min_value()
         return self.answer
