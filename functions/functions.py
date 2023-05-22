@@ -15,3 +15,8 @@ def receive_dates():
         date_begin = datetime.now() - timedelta(days=90)
 
     return datetime.strftime(date_begin, "%d/%m/%Y"), datetime.strftime(date_end, "%d/%m/%Y")
+
+
+def print_average_data(input_data):
+    for id_code, data in input_data.items():
+        print(f"{data['CharCode']}: {data['Average']}")

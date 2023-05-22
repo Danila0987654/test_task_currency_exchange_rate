@@ -59,17 +59,3 @@ class API:
         self.set_max_value()
         self.set_min_value()
         return self.answer
-
-    def get_average_data(self):
-        self.set_id()
-        self.set_currencies()
-        self.set_average_value()
-        return self.answer
-
-    def print_average_data(self):
-        self.set_id()
-        self.set_currencies()
-        self.set_average_value()
-        print(f"Average values for all valute from {self.start_date} to {self.end_date}")
-        for id_code, data in self.answer.items():
-            print(f"{data['CharCode']}: {data['Average']}")
